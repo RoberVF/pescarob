@@ -13,7 +13,12 @@
             fishingSpots.forEach(spot => {
                 L.marker([spot.latitude, spot.longitude])
                     .addTo(map)
-                    .bindPopup(`<b>${spot.name}</b>`);
+                    .bindPopup(`
+                        <div>
+                            <strong>${spot.name}</strong><br/>
+                            <small>${spot.description ? spot.description : 'Without notes :('}</small>
+                        </div>
+                        `)
             });
         });
     </script>

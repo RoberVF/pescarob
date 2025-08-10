@@ -19,7 +19,7 @@ class FishingMap extends Component
             $this->userName = $user->name;
             $this->userRole = $user->role;
         }
-        $this->fishingSpots = FishingSpot::all(['id', 'name', 'latitude', 'longitude'])->toArray();
+        $this->fishingSpots = FishingSpot::all(['id', 'name', 'description', 'latitude', 'longitude'])->toArray();
     }
 
     public function render()
