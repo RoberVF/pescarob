@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\FishingSpot;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,6 +10,7 @@ class FishingMap extends Component
 {
     public $userRole = 'demo';
     public $userName = null;
+    public $fishingSpots = [];
 
     public function mount()
     {
